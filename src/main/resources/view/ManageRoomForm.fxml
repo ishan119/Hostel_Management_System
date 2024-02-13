@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1157.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelmanagementsystem.controller.ManageRoomFormController">
+   <children>
+      <ImageView fitHeight="750.0" fitWidth="1157.0" layoutY="-2.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/background%20(2).jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/living-room.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="36.0" layoutY="6.0" text="Manage Rooms Form">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#567ea387" height="477.0" layoutX="643.0" layoutY="144.0" stroke="BLACK" strokeType="INSIDE" width="360.0" />
+      <Label layoutX="676.0" layoutY="171.0" text="Add / Update Or Delete Room Types">
+         <font>
+            <Font name="Book Antiqua Bold" size="19.0" />
+         </font>
+      </Label>
+      <Separator layoutX="652.0" layoutY="203.0" opacity="0.47" prefHeight="4.0" prefWidth="343.0" />
+      <JFXTextField fx:id="txtRoomTypeId" layoutX="684.0" layoutY="263.0" prefHeight="25.0" prefWidth="304.0" promptText="Room Type Id" />
+      <JFXTextField fx:id="txtDescription" layoutX="684.0" layoutY="352.0" prefHeight="25.0" prefWidth="304.0" promptText="Description" />
+      <JFXTextField fx:id="txtKeyMoney" layoutX="687.0" layoutY="449.0" prefHeight="25.0" prefWidth="304.0" promptText="KeyMoney (LKR)" />
+      <JFXButton fx:id="btnAddRoomType" layoutX="803.0" layoutY="505.0" onAction="#btnAddRoomTypeOnAction" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: green;" text="Add " textFill="#120101">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXButton>
+      <JFXButton layoutX="916.0" layoutY="505.0" onAction="#btnUpdateRoomTypeOnAction" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: blue;" text="Update" textFill="#160101">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="744.0" layoutY="564.0" onAction="#btnDeleteRoomTypeOnAction" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: red;" text="Delete" textFill="#100101">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtRoomId" layoutX="29.0" layoutY="68.0" prefHeight="25.0" prefWidth="188.0" promptText="Room Id" />
+      <JFXComboBox fx:id="cmbType" layoutX="29.0" layoutY="118.0" prefHeight="25.0" prefWidth="188.0" promptText="Type" />
+      <JFXButton fx:id="btnAdd" layoutX="292.0" layoutY="81.0" onAction="#btnAddRoomOnAction" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: green;" text="Add " textFill="#120101">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="427.0" layoutY="81.0" onAction="#btnUpdateRoomOnAction" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: blue;" text="Update" textFill="#160101">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="292.0" layoutY="143.0" onAction="#btnDeleteRoomOnAction" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: red;" text="Delete" textFill="#100101">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblRoom" layoutX="36.0" layoutY="275.0" prefHeight="351.0" prefWidth="531.0">
+        <columns>
+          <TableColumn fx:id="colRoomId" prefWidth="148.66665649414062" text="Room Id" />
+          <TableColumn fx:id="colType" prefWidth="153.66668701171875" text="Type" />
+            <TableColumn fx:id="colKeyMoney" prefWidth="227.0" text="KeyMoney (LKR)" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnSearch" layoutX="694.0" layoutY="505.0" onAction="#btnSearchOnAction" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: pink;" text="Search" textFill="#120101">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="857.0" layoutY="564.0" onAction="#btnClearRoomTypeOnAction" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: yellow;" text="Clear" textFill="#100101">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="427.0" layoutY="143.0" onAction="#btnClearRoomOnAction" prefHeight="25.0" prefWidth="72.0" style="-fx-background-color: yellow;" text="Clear" textFill="#100101">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
